@@ -6,7 +6,7 @@
 #    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/19 16:01:12 by marvin            #+#    #+#              #
-#    Updated: 2024/04/10 03:02:33 by marvin           ###   ########.fr        #
+#    Updated: 2024/05/01 21:13:34 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,4 +51,4 @@ check :
 
 re: fclean all clear 
 
-.PHONY: all clean fclean re val
+.PHONY: all clean fclean re val dependencies
