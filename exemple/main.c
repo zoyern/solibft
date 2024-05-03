@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 18:00:14 by marvin            #+#    #+#             */
-/*   Updated: 2024/04/19 17:50:43 by marvin           ###   ########.fr       */
+/*   Updated: 2024/05/02 16:06:29 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,10 @@
 
 int main(int argc, char **argv, char **envp)
 {
-	(void)argc;
-	(void)argv;
-	(void)envp;
 	t_solibft	*solibft;
 	int			state;
 
-	solibft = sonewlibft();
+	solibft = sonewlibft(sonew_types(argc, argv, envp));
 	if (solibft)
 	{
 		printf("╔══❖═══════❖══╗\n");

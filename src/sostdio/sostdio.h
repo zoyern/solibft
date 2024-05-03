@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sostdlib.h                                         :+:      :+:    :+:   */
+/*   sostdio.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:26:55 by marvin            #+#    #+#             */
-/*   Updated: 2024/04/11 21:26:55 by marvin           ###   ########.fr       */
+/*   Updated: 2024/05/02 16:03:02 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,6 @@
 # define SOSTDIO_H
 
 #include <solibft/all.h>
-
-typedef struct s_sostdio
-{
-	void	(*putchar)(char c, int fd);
-	void	(*putendl)(char *s, int fd);
-	void	(*putnbr)(int n, int fd);
-	void	(*putstr)(char *s, int fd);
-}	t_sostdio;
 
 int		sonewstdio(t_solibft *solibft);
 void	ft_putchar_fd(char c, int fd);

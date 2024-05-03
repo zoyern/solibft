@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   solibft.h                                          :+:      :+:    :+:   */
+/*   sotypes.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 17:59:30 by marvin            #+#    #+#             */
-/*   Updated: 2024/05/02 16:05:44 by marvin           ###   ########.fr       */
+/*   Updated: 2024/04/30 18:02:51 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SOLIBFT_H
-# define SOLIBFT_H
+#ifndef SOTYPES_H
+# define SOTYPES_H
 
-# include <solibft/types.h>
+# include <sotypes/types.h>
 
-t_solibft	*sonewlibft(t_solib *solib);
+t_solib	*sonew_types(int argc, char **argv, char **envp);
 
 #endif

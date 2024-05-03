@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   solibft.h                                          :+:      :+:    :+:   */
+/*   soenv.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/08 17:59:30 by marvin            #+#    #+#             */
-/*   Updated: 2024/05/02 16:05:44 by marvin           ###   ########.fr       */
+/*   Created: 2024/04/05 01:57:56 by marvin            #+#    #+#             */
+/*   Updated: 2024/04/30 18:09:01 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SOLIBFT_H
-# define SOLIBFT_H
+#ifndef SOENV_H
+# define SOENV_H
 
-# include <solibft/types.h>
+# include <sotypes/all.h>
 
-t_solibft	*sonewlibft(t_solib *solib);
+void	sonew_env(t_solib *solib, int argc, char **argv, char **envp);
 
 #endif

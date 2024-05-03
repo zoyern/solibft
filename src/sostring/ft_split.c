@@ -6,13 +6,13 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 10:14:13 by marvin            #+#    #+#             */
-/*   Updated: 2024/04/12 10:14:13 by marvin           ###   ########.fr       */
+/*   Updated: 2024/05/02 15:46:52 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <solibft/all.h>
 
-static int	get_count_word(char const *str, char c)
+int	get_count_word(char const *str, char c)
 {
 	int	k;
 
@@ -26,7 +26,7 @@ static int	get_count_word(char const *str, char c)
 	return (k);
 }
 
-static int	get_word_len(char const *str, char c)
+int	get_word_len(char const *str, char c)
 {
 	int	k;
 
@@ -36,7 +36,7 @@ static int	get_word_len(char const *str, char c)
 	return (k);
 }
 
-static int	free_all(char **array)
+int	free_all(char **array)
 {
 	int	k;
 

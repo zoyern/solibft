@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:31:29 by marvin            #+#    #+#             */
-/*   Updated: 2024/04/11 21:31:29 by marvin           ###   ########.fr       */
+/*   Updated: 2024/05/02 16:06:12 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,11 @@ int	solibft_close(t_solibft *solibft, int state)
 	return (state);
 }
 
-t_solibft	*sonewlibft(void)
+t_solibft	*sonewlibft(t_solib *solib)
 {
 	t_solibft	*solibft;
 
+	solib->memory->show(solib);
 	/*initialisation*/
 	solibft = (t_solibft *)malloc(sizeof(t_solibft));
 	if (!solibft)
