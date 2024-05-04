@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 18:00:14 by marvin            #+#    #+#             */
-/*   Updated: 2024/05/02 16:06:29 by marvin           ###   ########.fr       */
+/*   Updated: 2024/05/04 15:45:06 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,28 @@
 
 int main(int argc, char **argv, char **envp)
 {
-	t_solibft	*solibft;
+	t_solib		*solib;
 	int			state;
 
-	solibft = sonewlibft(sonew_types(argc, argv, envp));
-	if (solibft)
+	solib = sonew_libft(sonew_types(argc, argv, envp));
+	if (solib->solibft)
 	{
-		printf("╔══❖═══════❖══╗\n");
-		printf("║   SOLIBFT   ║\n");
-		printf("║             ║\n");
-		printf("║ loading :✅ ║\n");
-		printf("╚══❖═══════❖══╝\n");
+		solib->print("╔══❖═══════❖══╗\n");
+		solib->print("║   SOLIBFT   ║\n");
+		solib->print("║             ║\n");
+		solib->print("║ loading :✅ ║\n");
+		solib->print("╚══❖═══════❖══╝\n");
 		state = EXIT_SUCCESS;
 	}
 	else
 	{
-		printf("╔══❖═══════❖══╗\n");
-		printf("║   SOLIBFT   ║\n");
-		printf("║             ║\n");
-		printf("║ loading :⭕️ ║\n");
-		printf("╚══❖═══════❖══╝\n");
+		solib->print("╔══❖═══════❖══╗\n");
+		solib->print("║   SOLIBFT   ║\n");
+		solib->print("║             ║\n");
+		solib->print("║ loading :⭕️ ║\n");
+		solib->print("╚══❖═══════❖══╝\n");
 		state = EXIT_FAILURE;
 	}
-	return (solibft->close(solibft, state));
+	return (solib->close(solib, state));
 }
 

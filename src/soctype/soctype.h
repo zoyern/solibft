@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:26:55 by marvin            #+#    #+#             */
-/*   Updated: 2024/05/02 16:02:50 by marvin           ###   ########.fr       */
+/*   Updated: 2024/05/04 15:08:57 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <solibft/all.h>
 
-int		sonewctype(t_solibft *solibft);
+int		sonew_ctype(t_solibft *solibft);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);

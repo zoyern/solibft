@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:26:55 by marvin            #+#    #+#             */
-/*   Updated: 2024/05/02 16:04:21 by marvin           ###   ########.fr       */
+/*   Updated: 2024/05/04 15:17:51 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <solibft/all.h>
 
-int		sonewstring(t_solibft *solibft);
+int		sonew_sostring(t_solibft *solibft);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
