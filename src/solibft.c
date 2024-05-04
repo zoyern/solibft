@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:31:29 by marvin            #+#    #+#             */
-/*   Updated: 2024/05/04 15:41:35 by marvin           ###   ########.fr       */
+/*   Updated: 2024/05/04 17:06:53 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ t_solib	*sonew_libft(t_solib *solib)
 	sonew_sostring(solibft);
 	if (!solib)
 		solib = sonew_types(0, NULL, NULL);
-	solib->solibft = solibft;
+	solib->libft = solibft;
 	return (solib);
 }

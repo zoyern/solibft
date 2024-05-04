@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:27:45 by marvin            #+#    #+#             */
-/*   Updated: 2024/05/04 15:03:22 by marvin           ###   ########.fr       */
+/*   Updated: 2024/05/04 17:07:36 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ typedef struct s_solibft
 {
 	/*stdlib.h*/
 	int		(*atoi)(const char *nptr);
-	void	*(*calloc)(t_solibft *solibft, size_t nmemb, size_t size);
-	char	*(*itoa)(t_solibft *solibft, int n);
+	void	*(*calloc)(t_solib *solib, size_t nmemb, size_t size);
+	char	*(*itoa)(t_solib *solib, int n);
 	/*stdio.h*/
 	void	(*putchar)(char c, int fd);
 	void	(*putendl)(char *s, int fd);

@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 10:04:00 by marvin            #+#    #+#             */
-/*   Updated: 2024/04/12 10:04:00 by marvin           ###   ########.fr       */
+/*   Updated: 2024/05/04 17:31:59 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,8 @@ size_t	ft_nbrlen(int n)
 	return (count);
 }
 
-char	*ft_itoa(t_solibft *solibft, int n)
+char	*ft_itoa(t_solib *solib, int n)
 {
-	(void)solibft;
 	char			*s;
 	size_t	count;
 	int				sign;
@@ -38,7 +37,7 @@ char	*ft_itoa(t_solibft *solibft, int n)
 	nb = n;
 	count = ft_nbrlen(nb);
 	sign = 0;
-	s = (char *)malloc(sizeof(char) * count + 1);
+	s = (char *)somalloc(solib, sizeof(char) * count + 1);
 	if (!s)
 		return (NULL);
 	s[count] = '\0';
