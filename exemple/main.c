@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 18:00:14 by marvin            #+#    #+#             */
-/*   Updated: 2024/05/04 18:42:27 by marvin           ###   ########.fr       */
+/*   Updated: 2024/05/05 21:21:08 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,3 @@ int main(int argc, char **argv, char **envp)
 	}
 	return (solib->close(solib, state));
 }
-
