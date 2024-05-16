@@ -6,7 +6,7 @@
 /*   By: almounib <almounib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:27:45 by marvin            #+#    #+#             */
-/*   Updated: 2024/05/16 15:07:14 by almounib         ###   ########.fr       */
+/*   Updated: 2024/05/16 15:08:16 by almounib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,5 @@ typedef struct s_solibft
 	unsigned long	(*strlcat)(char *dst, const char *src, size_t size);
 	unsigned long	(*strlcpy)(char *dst, const char *src, size_t sz);
 }	t_solibft;
+
 #endif
