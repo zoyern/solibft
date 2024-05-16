@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: almounib <almounib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 13:14:48 by marvin            #+#    #+#             */
-/*   Updated: 2024/04/12 13:14:48 by marvin           ###   ########.fr       */
+/*   Updated: 2024/05/16 15:05:55 by almounib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_substr(char const *s, size_t start, size_t len)
 {
-	char			*t;
+	char	*t;
 	size_t	i;
 
 	if (!s)

@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   solibft.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: almounib <almounib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 17:59:30 by marvin            #+#    #+#             */
-/*   Updated: 2024/05/04 15:41:19 by marvin           ###   ########.fr       */
+/*   Updated: 2024/05/16 14:39:01 by almounib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SOLIBFT_H
 # define SOLIBFT_H
 
-# include <solibft/types.h>
+# include <solibft/solibft_t.h>
 
 t_solib	*sonew_libft(t_solib *solib);
 

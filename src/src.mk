@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    src.mk                                             :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
+#    By: almounib <almounib@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/01 18:55:59 by marvin            #+#    #+#              #
-#    Updated: 2024/04/01 18:55:59 by marvin           ###   ########.fr        #
+#    Updated: 2024/05/16 14:38:34 by almounib         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ DIR			+= $(SOSTRING_DIR)
 
 LIB_HEADER	= $(addprefix $(SRC_DIR)/, solibft.h)
 
-SRC_HEADER	=  types.h all.h
+SRC_HEADER	=  solibft_t.h all.h
 SRC_HEADER	+= $(SOSTDLIB_HEAD)
 SRC_HEADER	+= $(SOSTDIO_HEAD)
 SRC_HEADER	+= $(SOCTYPE_HEAD)

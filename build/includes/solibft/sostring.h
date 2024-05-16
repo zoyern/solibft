@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   sostring.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: almounib <almounib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:26:55 by marvin            #+#    #+#             */
-/*   Updated: 2024/05/04 15:17:51 by marvin           ###   ########.fr       */
+/*   Updated: 2024/05/16 15:05:40 by almounib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SOSTRING_H
 # define SOSTRING_H
 
-#include <solibft/all.h>
+# include <solibft/all.h>
 
 int		sonew_sostring(t_solibft *solibft);
 void	ft_bzero(void *s, size_t n);
