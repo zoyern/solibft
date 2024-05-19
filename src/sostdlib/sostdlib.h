@@ -16,7 +16,7 @@
 # include <solibft/all.h>
 
 int		sonew_stdlib(t_solibft *solibft);
-int		ft_atoi(const char *nptr);
+long	ft_atoi(const char *nptr);
 void	*ft_calloc(t_solib *solib, size_t nmemb, size_t size);
 char	*ft_itoa(t_solib *solib, int n);
 

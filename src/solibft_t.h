@@ -19,7 +19,7 @@
 
 typedef struct s_solibft
 {
-	int				(*atoi)(const char *nptr);
+	long			(*atoi)(const char *nptr);
 	void			*(*calloc)(t_solib *solib, size_t nmemb, size_t size);
 	char			*(*itoa)(t_solib *solib, int n);
 	void			(*putchar)(char c, int fd);
