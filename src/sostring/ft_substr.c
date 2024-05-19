@@ -12,7 +12,7 @@
 
 #include <solibft/all.h>
 
-char	*ft_substr(char const *s, size_t start, size_t len)
+char	*ft_substr(t_solib *solib, char const *s, size_t start, size_t len)
 {
 	char	*t;
 	size_t	i;
@@ -20,11 +20,11 @@ char	*ft_substr(char const *s, size_t start, size_t len)
 	if (!s)
 		return (NULL);
 	if (start > ft_strlen(s))
-		return (ft_strdup(""));
+		return (ft_strdup(solib, ""));
 	i = ft_strlen(s + start);
 	if (len > i)
 		len = i;
-	t = (char *)malloc(sizeof(char) * (len + 1));
+	t = (char *)solib->malloc(solib, sizeof(char) * (len + 1));
 	if (!t)
 		return (NULL);
 	ft_strlcpy(t, s + start, len + 1);

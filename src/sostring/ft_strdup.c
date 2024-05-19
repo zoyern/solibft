@@ -12,7 +12,7 @@
 
 #include <solibft/all.h>
 
-char	*ft_strdup(const char *s)
+char	*ft_strdup(t_solib *solib, const char *s)
 {
 	char	*out;
 	size_t	s_len;
@@ -20,7 +20,7 @@ char	*ft_strdup(const char *s)
 	if (!s)
 		return (0);
 	s_len = ft_strlen(s);
-	out = malloc(sizeof(char) * (s_len + 1));
+	out = solib->malloc(solib, sizeof(char) * (s_len + 1));
 	if (!out)
 		return (0);
 	ft_strlcpy(out, s, s_len + 1);

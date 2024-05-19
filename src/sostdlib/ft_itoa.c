@@ -37,7 +37,7 @@ char	*ft_itoa(t_solib *solib, int n)
 	nb = n;
 	count = ft_nbrlen(nb);
 	sign = 0;
-	s = (char *)somalloc(solib, sizeof(char) * count + 1);
+	s = (char *)solib->malloc(solib, sizeof(char) * count + 1);
 	if (!s)
 		return (NULL);
 	s[count] = '\0';

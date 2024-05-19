@@ -47,7 +47,7 @@ int	free_all(char **array)
 	return (1);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(t_solib *solib, char const *s, char c)
 {
 	char	**out;
 	int		out_len;
@@ -55,7 +55,7 @@ char	**ft_split(char const *s, char c)
 	int		word_len;
 
 	out_len = get_count_word(s, c);
-	out = malloc(sizeof(char *) * (out_len + 1));
+	out = solib->malloc(solib, sizeof(char *) * (out_len + 1));
 	if (!out)
 		return (0);
 	k = 0;
@@ -64,7 +64,7 @@ char	**ft_split(char const *s, char c)
 		while (*s == c)
 			s++;
 		word_len = get_word_len(s, c);
-		out[k] = ft_substr(s, 0, word_len);
+		out[k] = ft_substr(solib, s, 0, word_len);
 		if (!out[k] && free_all(out))
 			return (0);
 		s += word_len;

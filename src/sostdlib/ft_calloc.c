@@ -18,7 +18,7 @@ void	*ft_calloc(t_solib *solib, size_t nmemb, size_t size)
 
 	if (nmemb && (nmemb * size) / nmemb != size)
 		return (NULL);
-	t = somalloc(solib, nmemb * size);
+	t = solib->malloc(solib, nmemb * size);
 	if (!t)
 		return (NULL);
 	ft_bzero(t, nmemb * size);

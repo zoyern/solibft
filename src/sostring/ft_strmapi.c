@@ -12,14 +12,14 @@
 
 #include <solibft/all.h>
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(t_solib *solib, char const *s, char (*f)(unsigned int, char))
 {
 	char	*out;
 	int		out_len;
 	int		k;
 
 	out_len = ft_strlen(s);
-	out = malloc(sizeof(char) * (out_len + 1));
+	out = solib->malloc(solib, sizeof(char) * (out_len + 1));
 	if (!out)
 		return (0);
 	k = -1;

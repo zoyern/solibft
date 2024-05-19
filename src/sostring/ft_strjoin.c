@@ -12,7 +12,7 @@
 
 #include <solibft/all.h>
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(t_solib *solib, char const *s1, char const *s2)
 {
 	size_t	len;
 	char	*t;
@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (0);
 	len = ft_strlen(s1) + ft_strlen(s2);
-	t = (char *)malloc(sizeof(char) * (len + 1));
+	t = (char *)solib->malloc(solib, sizeof(char) * (len + 1));
 	if (!t)
 		return (0);
 	while (*s1)
