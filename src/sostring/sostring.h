@@ -6,7 +6,7 @@
 /*   By: almounib <almounib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:26:55 by marvin            #+#    #+#             */
-/*   Updated: 2024/05/16 15:05:40 by almounib         ###   ########.fr       */
+/*   Updated: 2024/05/20 17:45:29 by almounib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ char	*ft_strjoin(t_solib *solib, char const *s1, char const *s2);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t sz);
 size_t	ft_strlen(const char *s);
-char	*ft_strmapi(t_solib *solib, char const *s, char (*f)(unsigned int, char));
+char	*ft_strmapi(t_solib *solib,
+			char const *s, char (*f)(unsigned int, char));
 void	ft_strmcat(char **dst, char *src);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *s,	const char *needle, size_t n);

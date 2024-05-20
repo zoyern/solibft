@@ -6,7 +6,7 @@
 /*   By: almounib <almounib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 21:27:45 by marvin            #+#    #+#             */
-/*   Updated: 2024/05/16 15:08:16 by almounib         ###   ########.fr       */
+/*   Updated: 2024/05/20 17:45:02 by almounib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,16 @@ typedef struct s_solibft
 	void			(*striteri)(char *s, void (*f)(unsigned int, char*));
 	char			*(*strjoin)(t_solib *solib, char const *s1, char const *s2);
 	size_t			(*strlen)(const char *s);
-	char			*(*strmapi)(t_solib *solib, char const *s, char (*f)(unsigned int, char));
+	char			*(*strmapi)(t_solib *solib,
+			char const *s, char (*f)(unsigned int, char));
 	void			(*strmcat)(char **dst, char *src);
 	int				(*strncmp)(const char *s1, const char *s2, size_t n);
 	char			*(*strnstr)(const char *s,	const char *needle, size_t n);
 	char			*(*strrchr)(const char *s, int c);
-	char			*(*strtrim)(t_solib *solib, char const *s1, char const *set);
-	char			*(*substr)(t_solib *solib, char const *s, size_t start, size_t len);
+	char			*(*strtrim)(t_solib *solib,
+			char const *s1, char const *set);
+	char			*(*substr)(t_solib *solib,
+			char const *s, size_t start, size_t len);
 	unsigned long	(*strlcat)(char *dst, const char *src, size_t size);
 	unsigned long	(*strlcpy)(char *dst, const char *src, size_t sz);
 }	t_solibft;
