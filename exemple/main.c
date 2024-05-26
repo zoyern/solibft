@@ -19,8 +19,6 @@ int	main(int argc, char **argv, char **envp)
 	solib = sonew_libft(sonew_types(argc, argv, envp));
 	if (!solib)
 		return (solib->close(solib, EXIT_FAILURE));
-	if (!solib->libft)
-		return (solib->close(solib, EXIT_FAILURE));
 	solib->print("╔══❖═══════❖══╗\n");
 	solib->print("║   SOLIBFT   ║\n");
 	solib->print("║             ║\n");
