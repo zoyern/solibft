@@ -12,7 +12,7 @@
 
 #include <solibft/all.h>
 
-void	ft_strmcat(char **dst, char *src)
+void	ft_strmcat(t_solib *solib, char **dst, char *src)
 {
 	char	*out;
 	int		dst_len;
@@ -21,7 +21,7 @@ void	ft_strmcat(char **dst, char *src)
 
 	dst_len = ft_strlen(*dst);
 	src_len = ft_strlen(src);
-	out = malloc((dst_len + src_len + 1) * sizeof(char));
+	out = solib->malloc(solib, (dst_len + src_len + 1) * sizeof(char));
 	k = 0;
 	while (k < (dst_len + src_len))
 	{
@@ -36,6 +36,6 @@ void	ft_strmcat(char **dst, char *src)
 		k++;
 	}
 	out[k] = 0;
-	free(*dst);
+	solib->free(solib, *dst);
 	*dst = out;
 }
