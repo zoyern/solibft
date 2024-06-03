@@ -47,7 +47,7 @@ typedef struct s_solibft
 	size_t			(*strlen)(const char *s);
 	char			*(*strmapi)(t_solib *solib,
 			char const *s, char (*f)(unsigned int, char));
-	void			(*strmcat)(char **dst, char *src);
+	void			(*strmcat)(t_solib *solib, char **dst, char *src);
 	int				(*strncmp)(const char *s1, const char *s2, size_t n);
 	char			*(*strnstr)(const char *s,	const char *needle, size_t n);
 	char			*(*strrchr)(const char *s, int c);
