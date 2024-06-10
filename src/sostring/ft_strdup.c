@@ -12,19 +12,19 @@
 
 #include <solibft/all.h>
 
+
 char	*ft_strdup(t_solib *solib, const char *s)
 {
-	size_t	len;
-	char	*t;
+	char	*out;
+	size_t	s_len;
 
 	if (!s)
 		return (0);
-	len = ft_strlen(s);
-	t = (char *)solib->malloc(solib, sizeof(char) * (len + 1));
-	if (!t)
+	s_len = ft_strlen(s);
+	out = solib->malloc(solib, sizeof(char) * (s_len + 1));
+	if (!out)
 		return (0);
-	while (*s)
-		*t++ = *s++;
-	*t = 0;
-	return (t -= len);
+	ft_strlcpy(out, s, s_len + 1);
+	out[s_len] = 0;
+	return (out);
 }
