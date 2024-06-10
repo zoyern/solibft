@@ -14,16 +14,17 @@
 
 char	*ft_strdup(t_solib *solib, const char *s)
 {
-	char	*out;
-	size_t	s_len;
+	size_t	len;
+	char	*t;
 
 	if (!s)
 		return (0);
-	s_len = ft_strlen(s);
-	out = solib->malloc(solib, sizeof(char) * (s_len + 1));
-	if (!out)
+	len = ft_strlen(s);
+	t = (char *)solib->malloc(solib, sizeof(char) * (len + 1));
+	if (!t)
 		return (0);
-	ft_strlcpy(out, s, s_len + 1);
-	out[s_len] = 0;
-	return (out);
+	while (*s)
+		*t++ = *s++;
+	*t = 0;
+	return (t -= len);
 }
