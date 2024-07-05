@@ -12,6 +12,15 @@
 
 #include <solibft/all.h>
 
+int	sonew_sostring_init(t_solibft *solibft)
+{
+	if (!solibft)
+		return (1);
+	solibft->strupper = ft_strupper;
+	solibft->strlower = ft_strlower;
+	return (0);
+}
+
 int	sonew_sostring(t_solibft *solibft)
 {
 	if (!solibft)
@@ -37,5 +46,6 @@ int	sonew_sostring(t_solibft *solibft)
 	solibft->strrchr = ft_strrchr;
 	solibft->strtrim = ft_strtrim;
 	solibft->substr = ft_substr;
-	return (0);
+	solibft->strupper = ft_strupper;
+	return (sonew_sostring_init(solibft));
 }
