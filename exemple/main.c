@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "exemple.h"
+#include "solibft/all.h"
 
 int	main(int argc, char **argv, char **envp)
 {
