@@ -19,8 +19,6 @@ int	sonew_stdlib(t_solibft *solibft)
 	solibft->atoi = ft_atoi;
 	solibft->calloc = ft_calloc;
 	solibft->itoa = ft_itoa;
-	//solibft->atoi_base = ft_atoi_base;
-	//solibft->itoa_base = ft_itoa_base;
-	//solibft->convert_base = ft_convert_base;
+	solibft->atoi_base = ft_atoi_base;
 	return (0);
 }

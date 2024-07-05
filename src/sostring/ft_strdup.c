@@ -12,7 +12,6 @@
 
 #include <solibft/all.h>
 
-
 char	*ft_strdup(t_solib *solib, const char *s)
 {
 	char	*out;
