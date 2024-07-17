@@ -11,6 +11,7 @@
 		"sostring.h": "c",
 		"exemple.h": "c",
 		"sostdlib.h": "c",
-		"sotypes.h": "c"
+		"sotypes.h": "c",
+		"somemory.h": "c"
 	}
 }

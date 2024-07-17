@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <solibft/all.h>
+#include <sotypes/somemory.h>
 
 char	*ft_strtrim(t_solib *solib, char const *s1, char const *set)
 {
@@ -28,7 +29,7 @@ char	*ft_strtrim(t_solib *solib, char const *s1, char const *set)
 		start++;
 	while (end > start && ft_strrchr(set, s1[end - 1]))
 		end--;
-	t = (char *)solib->malloc(solib, sizeof(char) * ((end - start) + 1));
+	t = (char *)somalloc(solib, sizeof(char) * ((end - start) + 1));
 	if (!t)
 		return (NULL);
 	while (start < end)

@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <solibft/all.h>
+#include <sotypes/somemory.h>
 
 int	get_count_word(char const *str, char c)
 {
@@ -36,14 +37,14 @@ int	get_word_len(char const *str, char c)
 	return (k);
 }
 
-int	free_all(char **array)
+int	free_all(t_solib *solib, char **array)
 {
 	int	k;
 
 	k = 0;
 	while (array[k])
-		free(array[k++]);
-	free(array);
+		sofree(solib, array[k++]);
+	sofree(solib, array);
 	return (1);
 }
 
@@ -55,7 +56,7 @@ char	**ft_split(t_solib *solib, char const *s, char c)
 	int		word_len;
 
 	out_len = get_count_word(s, c);
-	out = solib->malloc(solib, sizeof(char *) * (out_len + 1));
+	out = somalloc(solib, sizeof(char *) * (out_len + 1));
 	if (!out)
 		return (0);
 	k = 0;
@@ -65,7 +66,7 @@ char	**ft_split(t_solib *solib, char const *s, char c)
 			s++;
 		word_len = get_word_len(s, c);
 		out[k] = ft_substr(solib, s, 0, word_len);
-		if (!out[k] && free_all(out))
+		if (!out[k] && free_all(solib, out))
 			return (0);
 		s += word_len;
 		k++;

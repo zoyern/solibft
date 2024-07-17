@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <solibft/all.h>
+#include <sotypes/somemory.h>
 
 void	ft_strmcat(t_solib *solib, char **dst, char *src)
 {
@@ -21,7 +22,7 @@ void	ft_strmcat(t_solib *solib, char **dst, char *src)
 
 	dst_len = ft_strlen(*dst);
 	src_len = ft_strlen(src);
-	out = solib->malloc(solib, (dst_len + src_len + 1) * sizeof(char));
+	out = somalloc(solib, (dst_len + src_len + 1) * sizeof(char));
 	k = 0;
 	while (k < (dst_len + src_len))
 	{
@@ -36,6 +37,6 @@ void	ft_strmcat(t_solib *solib, char **dst, char *src)
 		k++;
 	}
 	out[k] = 0;
-	solib->free(solib, *dst);
+	sofree(solib, *dst);
 	*dst = out;
 }

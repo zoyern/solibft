@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <solibft/all.h>
+#include <sotypes/somemory.h>
 
 void	*ft_calloc(t_solib *solib, size_t nmemb, size_t size)
 {
@@ -18,7 +19,7 @@ void	*ft_calloc(t_solib *solib, size_t nmemb, size_t size)
 
 	if (nmemb && (nmemb * size) / nmemb != size)
 		return (NULL);
-	t = solib->malloc(solib, nmemb * size);
+	t = somalloc(solib, nmemb * size);
 	if (!t)
 		return (NULL);
 	ft_bzero(t, nmemb * size);

@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <solibft/all.h>
+#include <sotypes/somemory.h>
 
 char	*ft_strdup(t_solib *solib, const char *s)
 {
@@ -20,10 +21,7 @@ char	*ft_strdup(t_solib *solib, const char *s)
 	if (!s)
 		return (0);
 	s_len = ft_strlen(s);
-	if (!solib)
-		out = solib->malloc(solib, sizeof(char) * (s_len + 1));
-	else
-		out = malloc(sizeof(char) * (s_len + 1));
+	out = somalloc(solib, sizeof(char) * (s_len + 1));
 	if (!out)
 		return (0);
 	ft_strlcpy(out, s, s_len + 1);

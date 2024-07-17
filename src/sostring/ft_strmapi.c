@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <solibft/all.h>
+#include <sotypes/somemory.h>
 
 char	*ft_strmapi(t_solib *solib,
 			char const *s, char (*f)(unsigned int, char))
@@ -20,7 +21,7 @@ char	*ft_strmapi(t_solib *solib,
 	int		k;
 
 	out_len = ft_strlen(s);
-	out = solib->malloc(solib, sizeof(char) * (out_len + 1));
+	out = somalloc(solib, sizeof(char) * (out_len + 1));
 	if (!out)
 		return (0);
 	k = -1;
