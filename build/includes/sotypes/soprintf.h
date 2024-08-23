@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 01:57:56 by marvin            #+#    #+#             */
-/*   Updated: 2024/07/11 03:28:21 by marvin           ###   ########.fr       */
+/*   Updated: 2024/08/23 20:12:54 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <sotypes/all.h>
 
-int		soprintf(const char *str, ...);
 void	soprintf_select(va_list list_arg, const char **str, size_t *len);
 size_t	soprint_strlen(const char *str);
 void	soprintf_putcolor_len(const char **s, va_list list_arg,
@@ -24,8 +23,8 @@ void	ft_putchar_len(char c, size_t *len);
 void	ft_putstr_len(char *s, size_t *len);
 void	ft_putstrs_len(char **strs, size_t *len);
 void	ft_putbool_len(int boolean, size_t *len);
-void	ft_putnbr_len(int n, size_t *len);
-void	ft_putnbr_len_base(unsigned int n, char *base, size_t *len);
+void	ft_putnbr_len(long long n, size_t *len);
+void	ft_putnbr_len_base(unsigned long long n, char *base, size_t *len);
 void	ft_putptr_len(unsigned long n, char *base, size_t *len);
 char	*hex_to_ansi(char *hex, int is_background);
 char	*ansi_format(int cc, int is_background);

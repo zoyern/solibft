@@ -13,7 +13,7 @@
 #include <solibft/all.h>
 #include <sotypes/somemory.h>
 
-size_t	ft_nbrlen(int n)
+size_t	ft_nbrlen(long long n)
 {
 	size_t	count;
 
@@ -28,12 +28,12 @@ size_t	ft_nbrlen(int n)
 	return (count);
 }
 
-char	*ft_itoa(t_solib *solib, int n)
+char	*ft_itoa(t_solib *solib, long long n)
 {
 	char		*s;
-	size_t		count;
-	int			sign;
-	long int	nb;
+	long long	count;
+	long long	sign;
+	long long	nb;
 
 	nb = n;
 	count = ft_nbrlen(nb);
@@ -47,7 +47,7 @@ char	*ft_itoa(t_solib *solib, int n)
 		nb *= -1;
 		s[sign++] = '-';
 	}
-	while (count-- > (size_t)sign)
+	while (count-- > (long long)sign)
 	{
 		s[count] = (nb % 10) + '0';
 		nb /= 10;

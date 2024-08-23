@@ -22,9 +22,9 @@ typedef struct s_solibft
 	char			*(*strlower)(char *str);
 	char			*(*strupper)(char *str);
 	int				(*atoi_base)(char *str, char *base);
-	long			(*atoi)(const char *nptr);
+	long long		(*atoi)(const char *nptr);
 	void			*(*calloc)(t_solib *solib, size_t nmemb, size_t size);
-	char			*(*itoa)(t_solib *solib, int n);
+	char			*(*itoa)(t_solib *solib, long long n);
 	void			(*putchar)(char c, int fd);
 	void			(*putendl)(char *s, int fd);
 	void			(*putnbr)(int n, int fd);

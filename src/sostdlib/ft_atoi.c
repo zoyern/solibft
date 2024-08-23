@@ -18,11 +18,11 @@ int	ft_isspace(char c)
 		|| c == '\r' || c == '\t' || c == '\v');
 }
 
-long	ft_atoi(const char *nptr)
+long long	ft_atoi(const char *nptr)
 {
-	size_t	i;
-	int		sign;
-	long	num;
+	long long	i;
+	long long	sign;
+	long long	num;
 
 	i = 0;
 	sign = 1;
