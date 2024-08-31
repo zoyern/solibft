@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: almounib <almounib@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 10:18:50 by marvin            #+#    #+#             */
-/*   Updated: 2024/05/16 15:05:17 by almounib         ###   ########.fr       */
+/*   Created: 2024/08/31 22:40:02 by marvin            #+#    #+#             */
+/*   Updated: 2024/08/31 22:40:02 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <solibft/all.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] && s2[i] && (s1[i] == s2[i]) && n--)
-		i++;
+	while (s1[i] && s2[i] && s1[i] == s2[i])
+		++i;
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

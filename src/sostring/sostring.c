@@ -17,6 +17,7 @@ int	sonew_sostring_init(t_solibft *solibft)
 	if (!solibft)
 		return (1);
 	solibft->strupper = ft_strupper;
+	solibft->strupper = ft_strupper;
 	solibft->strlower = ft_strlower;
 	return (0);
 }
@@ -41,11 +42,11 @@ int	sonew_sostring(t_solibft *solibft)
 	solibft->strlen = ft_strlen;
 	solibft->strmapi = ft_strmapi;
 	solibft->strmcat = ft_strmcat;
+	solibft->strcmp = ft_strcmp;
 	solibft->strncmp = ft_strncmp;
 	solibft->strnstr = ft_strnstr;
 	solibft->strrchr = ft_strrchr;
 	solibft->strtrim = ft_strtrim;
 	solibft->substr = ft_substr;
-	solibft->strupper = ft_strupper;
 	return (sonew_sostring_init(solibft));
 }

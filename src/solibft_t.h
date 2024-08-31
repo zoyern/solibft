@@ -51,6 +51,7 @@ typedef struct s_solibft
 	char			*(*strmapi)(t_solib *solib,
 			char const *s, char (*f)(unsigned int, char));
 	void			(*strmcat)(t_solib *solib, char **dst, char *src);
+	int				(*strcmp)(const char *s1, const char *s2);
 	int				(*strncmp)(const char *s1, const char *s2, size_t n);
 	char			*(*strnstr)(const char *s,	const char *needle, size_t n);
 	char			*(*strrchr)(const char *s, int c);
