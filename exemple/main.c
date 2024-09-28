@@ -21,7 +21,7 @@ int	main(int argc, char **argv, char **envp)
 	if (!solib)
 		return (solib->close(solib, EXIT_FAILURE));
 	solib->print("╔══❖═══════❖══╗\n");
-	solib->print("║   SOLIBFT   ║\n");
+	solib->print("║   %C-bi#0000FF(SOLIBFT)   ║\n");
 	solib->print("║             ║\n");
 	solib->print("║ loading :✅ ║\n");
 	solib->print("╚══❖═══════❖══╝\n");
