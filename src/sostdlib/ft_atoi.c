@@ -27,12 +27,12 @@ long long	ft_atoi(const char *nptr)
 	i = 0;
 	sign = 1;
 	num = 0;
-	while (nptr[i] && ft_isspace(nptr[i]))
+	while (nptr && ft_isspace(nptr[i]))
 		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
+	while (nptr && (nptr[i] == '-' || nptr[i] == '+'))
 		if (nptr[i++] == '-')
 			sign *= -1;
-	while (nptr[i] >= '0' && nptr[i] <= '9')
+	while (nptr && (nptr[i] >= '0' && nptr[i] <= '9'))
 		num = (num * 10) + (nptr[i++] - '0');
 	return (num * sign);
 }

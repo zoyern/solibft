@@ -19,7 +19,7 @@ int	check_base(char *base)
 
 	i = 0;
 	j = 0;
-	if (base[0] == '\0' || base[1] == '\0')
+	if (!base || base[0] == '\0' || base[1] == '\0')
 		return (1);
 	while (base[i])
 	{
@@ -45,7 +45,7 @@ int	find_in_base(char c, char *base)
 	int	i;
 
 	i = 0;
-	while (base[i])
+	while (base && base[i])
 	{
 		if (base[i] == c)
 			return (1);
@@ -59,7 +59,7 @@ int	index_num(char c, char *base)
 	int	c_index;
 
 	c_index = 0;
-	while (base[c_index] && base[c_index] != c)
+	while (base && base[c_index] && base[c_index] != c)
 		c_index++;
 	return (c_index);
 }
@@ -75,16 +75,16 @@ int	ft_atoi_base(char *str, char *base)
 	if (check_base(base))
 		return (num * sign);
 	i = 0;
-	while (str[i] == ' ' || str[i] == '\f' || str[i] == '\n'
-		|| str[i] == '\r' || str[i] == '\t' || str[i] == '\v')
+	while (str && str[i] && (str[i] == ' ' || str[i] == '\f' || str[i] == '\n'
+			|| str[i] == '\r' || str[i] == '\t' || str[i] == '\v'))
 		i++;
-	while ((str[i] == '-' || str[i] == '+') && str[i])
+	while (str && str[i] && (str[i] == '-' || str[i] == '+'))
 	{
 		if (str[i] == '-')
 			sign *= -1;
 		i++;
 	}
-	while (find_in_base(str[i], base))
+	while (str && str[i] && find_in_base(str[i], base))
 	{
 		num = (num * ft_strlen(base) + index_num(str[i], base));
 		i++;
